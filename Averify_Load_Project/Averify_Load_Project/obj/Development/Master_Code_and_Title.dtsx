@@ -1,0 +1,1358 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/13/2015 1:31:21 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="SQL1"
+  DTS:CreatorName="SQL1\asava"
+  DTS:DTSID="{0A8D0C58-A89F-4113-9396-019FD2E32614}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.5548.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Master_Code_and_Title"
+  DTS:PackageType="5"
+  DTS:VersionBuild="81"
+  DTS:VersionGUID="{01ED317C-4EA9-4D37-8CF2-C8ADDAC1F0B6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Master_Code n_Title Files_Layout]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Master_Code n_Title Files_Layout"
+      DTS:DTSID="{B045BBEA-39C2-46EE-A033-D4E8512A7BB5}"
+      DTS:ObjectName="Master_Code n_Title Files_Layout">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::sFileName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="RaggedRight"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="4"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:ObjectName="Filler"
+              DTS:DTSID="{F835E0E7-EFB3-464A-A695-1B8514AC4947}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="5"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:ObjectName="Procedure code"
+              DTS:DTSID="{E16A778E-F739-456A-8977-EE7088369679}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="2"
+              DTS:MaximumWidth="2"
+              DTS:DataType="129"
+              DTS:ObjectName="Filler1"
+              DTS:DTSID="{B5379207-9ED7-4597-81B8-ECF07FD2E94F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="2"
+              DTS:MaximumWidth="2"
+              DTS:DataType="129"
+              DTS:ObjectName="Modifier HCPCS"
+              DTS:DTSID="{D3630E6B-AF81-4C25-B566-B3A1AC60E140}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="2"
+              DTS:MaximumWidth="2"
+              DTS:DataType="129"
+              DTS:ObjectName="Filler2"
+              DTS:DTSID="{6B92D918-6439-4955-9F4F-CAD361DD4A7B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="35"
+              DTS:MaximumWidth="35"
+              DTS:DataType="129"
+              DTS:ObjectName="Description"
+              DTS:DTSID="{D3DDBCC9-92E8-491A-ADF6-1CF5A1CC8E95}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="5"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:ObjectName="Relative value"
+              DTS:DTSID="{42E62805-6F46-4FF5-A4DA-7ADD7B0EDF57}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:ObjectName="Inpatient"
+              DTS:DTSID="{2E9D1700-1AAC-4308-B503-2FA3F4E0481F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SQL1.LOAD]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{39A5FBC5-F15E-479E-AD9E-C0A3A21EE87A}"
+      DTS:ObjectName="SQL1.LOAD">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=SQL1;Initial Catalog=LOAD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9521D734-F0A0-413A-AF1F-35B29783B33E}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="oLayoutFile">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9AC080CC-FBA8-4587-8EA7-8B3CE2285032}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="sFileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{507B4133-0731-429B-BC30-5757B02F0A0D}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REPLACE((DT_WSTR,30)(DT_R8)@[System::ContainerStartTime],&quot;.&quot;,&quot;&quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="sFileProcessId">
+      <DTS:VariableValue
+        DTS:DataType="8">42111479432870372</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{07ECE958-ADB7-4898-83C2-5F01ED6283BB}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="sShortFileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{08E5DC8D-5D1D-4890-826A-F29332402633}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="sSubjectArea">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{4F8147D7-B668-4AC8-AE0A-68FDFE4601A6}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.SqlServer.Dts.Runtime.Enumerators.ADO.ForEachADOEnumerator, Microsoft.SqlServer.ForEachADOEnumerator, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+        DTS:DTSID="{E20F22D0-00E0-40E1-A6B6-9745D863AEAA}"
+        DTS:ObjectName="{E20F22D0-00E0-40E1-A6B6-9745D863AEAA}">
+        <DTS:ObjectData>
+          <FEEADO
+            EnumType="EnumerateRowsInFirstTable"
+            VarName="User::oLayoutFile" />
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Master_Code_and_Title"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{EAD8B423-DB43-4999-86F2-1D27C68ACF20}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Master_Code_and_Title"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables"
+                  componentClassID="{49928E82-9C4E-49F0-AABE-3812B82707EC}"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Add Metadata Variables"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Output].Columns[FileName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Output].Columns[FileName]"
+                          name="FileName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_WSTR,100)@[User::sShortFileName]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_WSTR,100)@[User::sShortFileName]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Output].Columns[FileProcessId]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="20"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Output].Columns[FileProcessId]"
+                          name="FileProcessId"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_WSTR,20)@[User::sFileProcessId]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_WSTR,20)@[User::sFileProcessId]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Output].Columns[FileProcessDateTime]"
+                          dataType="date"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Output].Columns[FileProcessDateTime]"
+                          name="FileProcessDateTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[System::ContainerStartTime]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[System::ContainerStartTime]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Output].Columns[SubjectArea]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Output].Columns[SubjectArea]"
+                          name="SubjectArea"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,100,1252)@[User::sSubjectArea]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,100,1252)@[User::sSubjectArea]</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title"
+                  componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Master_Code_n_Title"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[Averify].[Master_Code_n_Title]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">ROWS_PER_BATCH = 5000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">1000</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[SQL1.LOAD]"
+                      connectionManagerRefId="Package.ConnectionManagers[SQL1.LOAD]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].Columns[FileName]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="FileName"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[FileName]"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Output].Columns[FileName]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].Columns[FileProcessId]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="FileProcessId"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[FileProcessId]"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Output].Columns[FileProcessId]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].Columns[Filler]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="Filler"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[Filler]"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Filler]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].Columns[Procedure code]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="5"
+                          cachedName="Procedure code"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[Procedure code]"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Procedure code]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].Columns[Filler1]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="2"
+                          cachedName="Filler1"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[Filler1]"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Filler1]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].Columns[Modifier HCPCS]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="2"
+                          cachedName="Modifier HCPCS"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[Modifier HCPCS]"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Modifier HCPCS]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].Columns[Filler2]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="2"
+                          cachedName="Filler2"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[Filler2]"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Filler2]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].Columns[Description]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="35"
+                          cachedName="Description"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Description]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].Columns[Relative value]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="5"
+                          cachedName="Relative value"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[Relative value]"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Relative value]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].Columns[Inpatient]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="7"
+                          cachedName="Inpatient"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[Inpatient]"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Inpatient]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].Columns[FileProcessDateTime]"
+                          cachedDataType="date"
+                          cachedName="FileProcessDateTime"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[FileProcessDateTime]"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Output].Columns[FileProcessDateTime]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].Columns[SubjectArea]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="SubjectArea"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[SubjectArea]"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Output].Columns[SubjectArea]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[FileName]"
+                          dataType="wstr"
+                          length="100"
+                          name="FileName" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[FileProcessId]"
+                          dataType="wstr"
+                          length="20"
+                          name="FileProcessId" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[Filler]"
+                          codePage="1252"
+                          dataType="str"
+                          length="4"
+                          name="Filler" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[Procedure code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="Procedure code" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[Filler1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="2"
+                          name="Filler1" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[Modifier HCPCS]"
+                          codePage="1252"
+                          dataType="str"
+                          length="2"
+                          name="Modifier HCPCS" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[Filler2]"
+                          codePage="1252"
+                          dataType="str"
+                          length="2"
+                          name="Filler2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                          codePage="1252"
+                          dataType="str"
+                          length="35"
+                          name="Description" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[Relative value]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="Relative value" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[Inpatient]"
+                          codePage="1252"
+                          dataType="str"
+                          length="7"
+                          name="Inpatient" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[SubjectArea]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="SubjectArea" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input].ExternalColumns[FileProcessDateTime]"
+                          dataType="dbTimeStamp"
+                          name="FileProcessDateTime" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source"
+                  componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Master_Code_n_Title_Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Master_Code n_Title Files_Layout]"
+                      connectionManagerRefId="Package.ConnectionManagers[Master_Code n_Title Files_Layout]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Filler]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].ExternalColumns[Filler]"
+                          length="4"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Filler]"
+                          name="Filler"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Procedure code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].ExternalColumns[Procedure code]"
+                          length="5"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Procedure code]"
+                          name="Procedure code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Filler1]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].ExternalColumns[Filler1]"
+                          length="2"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Filler1]"
+                          name="Filler1"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Modifier HCPCS]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].ExternalColumns[Modifier HCPCS]"
+                          length="2"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Modifier HCPCS]"
+                          name="Modifier HCPCS"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Filler2]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].ExternalColumns[Filler2]"
+                          length="2"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Filler2]"
+                          name="Filler2"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Description]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].ExternalColumns[Description]"
+                          length="35"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Description]"
+                          name="Description"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Relative value]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].ExternalColumns[Relative value]"
+                          length="5"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Relative value]"
+                          name="Relative value"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Inpatient]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].ExternalColumns[Inpatient]"
+                          length="7"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].Columns[Inpatient]"
+                          name="Inpatient"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].ExternalColumns[Filler]"
+                          codePage="1252"
+                          dataType="str"
+                          length="4"
+                          name="Filler" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].ExternalColumns[Procedure code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="Procedure code" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].ExternalColumns[Filler1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="2"
+                          name="Filler1" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].ExternalColumns[Modifier HCPCS]"
+                          codePage="1252"
+                          dataType="str"
+                          length="2"
+                          name="Modifier HCPCS" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].ExternalColumns[Filler2]"
+                          codePage="1252"
+                          dataType="str"
+                          length="2"
+                          name="Filler2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].ExternalColumns[Description]"
+                          codePage="1252"
+                          dataType="str"
+                          length="35"
+                          name="Description" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].ExternalColumns[Relative value]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="Relative value" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output].ExternalColumns[Inpatient]"
+                          codePage="1252"
+                          dataType="str"
+                          length="7"
+                          name="Inpatient" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\Master_Code_and_Title.Paths[Derived Column Output]"
+                  endId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Master_Code_and_Title.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables.Inputs[Derived Column Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{32CBB9AE-AD0B-4280-9665-6E96543A0B82}"
+          DTS:ObjectName="{32CBB9AE-AD0B-4280-9665-6E96543A0B82}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::sFileName" />
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{FC83F4BB-6BEF-4F1D-BA89-2FA41C1B3EFB}"
+          DTS:ObjectName="{FC83F4BB-6BEF-4F1D-BA89-2FA41C1B3EFB}"
+          DTS:ValueIndex="1"
+          DTS:VariableName="User::sShortFileName" />
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{7BA0124F-4CF4-4624-98D8-F37109801678}"
+          DTS:ObjectName="{7BA0124F-4CF4-4624-98D8-F37109801678}"
+          DTS:ValueIndex="2"
+          DTS:VariableName="User::sSubjectArea" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get Files for this Layout"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{612a7cc1-bc2f-451f-bc36-fe73cd9d0b82}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get Files for this Layout"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Get Files for this Layout\FileName"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="FileName"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Averify].[File_LookUp]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">Select FileFullPath,FileName,FileSubjectArea
+from  Averify.File_Lookup
+where FileLayoutGroupFolder='FileType_Master Code and Title Files'</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Get Files for this Layout\FileName.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SQL1.LOAD]"
+                  connectionManagerRefId="Package.ConnectionManagers[SQL1.LOAD]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].Columns[FileFullPath]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].ExternalColumns[FileFullPath]"
+                      length="255"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].Columns[FileFullPath]"
+                      name="FileFullPath"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].Columns[FileName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].ExternalColumns[FileName]"
+                      length="100"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].Columns[FileName]"
+                      name="FileName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].Columns[FileSubjectArea]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].ExternalColumns[FileSubjectArea]"
+                      length="150"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].Columns[FileSubjectArea]"
+                      name="FileSubjectArea"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].ExternalColumns[FileFullPath]"
+                      dataType="wstr"
+                      length="255"
+                      name="FileFullPath" />
+                    <externalMetadataColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].ExternalColumns[FileName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="FileName" />
+                    <externalMetadataColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].ExternalColumns[FileSubjectArea]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      name="FileSubjectArea" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[FileFullPath]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[FileFullPath]"
+                      name="FileFullPath" />
+                    <outputColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[FileName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[FileName]"
+                      name="FileName" />
+                    <outputColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[FileSubjectArea]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[FileSubjectArea]"
+                      name="FileSubjectArea" />
+                    <outputColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Get Files for this Layout\Recordset Destination"
+              componentClassID="{C457FD7E-CE98-4C4B-AEFE-F3AE0044F181}"
+              contactInfo="Recordset Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates and populates an in-memory ADO recordset that is available outside of the data flow. Scripts and other package elements can use the recordset. For example, use a recordset to store the names of files that will be loaded into the data warehouse."
+              name="Recordset Destination">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the recordset."
+                  name="VariableName">User::oLayoutFile</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Get Files for this Layout\Recordset Destination.Inputs[Recordset Destination Input]"
+                  hasSideEffects="true"
+                  name="Recordset Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Get Files for this Layout\Recordset Destination.Inputs[Recordset Destination Input].Columns[FileFullPath]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FileFullPath"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].Columns[FileFullPath]" />
+                    <inputColumn
+                      refId="Package\Get Files for this Layout\Recordset Destination.Inputs[Recordset Destination Input].Columns[FileName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="FileName"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].Columns[FileName]" />
+                    <inputColumn
+                      refId="Package\Get Files for this Layout\Recordset Destination.Inputs[Recordset Destination Input].Columns[FileSubjectArea]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="FileSubjectArea"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].Columns[FileSubjectArea]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Get Files for this Layout.Paths[OLE DB Source Output]"
+              endId="Package\Get Files for this Layout\Recordset Destination.Inputs[Recordset Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{E2DB6AA1-8924-474A-A083-9DD9A8368F09}"
+      DTS:From="Package\Get Files for this Layout"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Foreach Loop Container" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Foreach Loop Container\Master_Code_and_Title"
+          TopLeft="5.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="201,102"
+          Size="214,145"
+          Id="Package\Foreach Loop Container"
+          TopLeft="138,81" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Get Files for this Layout"
+          TopLeft="146,2" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="243.25,44">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Foreach Loop Container\Master_Code_and_Title">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="216,42"
+          Id="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title_Source"
+          TopLeft="80,27" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title"
+          TopLeft="100,193" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Foreach Loop Container\Master_Code_and_Title\Add Metadata Variables"
+          TopLeft="96,98" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Master_Code_and_Title.Paths[Flat File Source Output]"
+          TopLeft="189.5,69">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29"
+              Start="0,0"
+              End="0,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Master_Code_and_Title.Paths[Derived Column Output]"
+          TopLeft="190,140">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53"
+              Start="0,0"
+              End="0,45.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Master_Code_and_Title\Master_Code_n_Title">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Get Files for this Layout">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="122,42"
+          Id="Package\Get Files for this Layout\FileName"
+          TopLeft="104,50" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Get Files for this Layout\Recordset Destination"
+          TopLeft="324,50" />
+        <EdgeLayout
+          Id="Package\Get Files for this Layout.Paths[OLE DB Source Output]"
+          TopLeft="226,71">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="98,0"
+              Start="0,0"
+              End="90.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="90.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Get Files for this Layout\FileName">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

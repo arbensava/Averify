@@ -1,0 +1,2158 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/13/2015 1:31:21 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="SQL1"
+  DTS:CreatorName="SQL1\asava"
+  DTS:DTSID="{06DDCB45-7647-439C-ACEA-D2AFD96B73FD}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.5548.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Body_Range"
+  DTS:PackageType="5"
+  DTS:VersionBuild="82"
+  DTS:VersionGUID="{4799E889-46F9-4784-B009-DAC77DE74074}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Body Range Files_Layout_60_61_66]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Body Range Files_Layout_60_61_66"
+      DTS:DTSID="{E183FB93-2241-4083-AE76-51F26288DA3C}"
+      DTS:ObjectName="Body Range Files_Layout_60_61_66">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::sFileName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="RaggedRight"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="2"
+              DTS:MaximumWidth="2"
+              DTS:DataType="129"
+              DTS:ObjectName="Record type"
+              DTS:DTSID="{5A90944E-4502-4BC1-88C5-4B4CF9F259F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="1"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:ObjectName="Type"
+              DTS:DTSID="{FCD482DE-000D-40A2-A308-EDD958E07983}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="2"
+              DTS:MaximumWidth="2"
+              DTS:DataType="129"
+              DTS:ObjectName="State_Region Abbreviation"
+              DTS:DTSID="{95B1F8F5-399C-49F9-B483-13C2AA66D0C2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="3"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:ObjectName="Geographical area (geozip)"
+              DTS:DTSID="{5B9298EA-73E2-46D0-8B27-735B8DA53ED7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="1"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:ObjectName="Identifies system codes"
+              DTS:DTSID="{DC96C970-EE37-4798-8516-4B9C68763A65}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="2"
+              DTS:MaximumWidth="2"
+              DTS:DataType="129"
+              DTS:ObjectName="Bodily range group"
+              DTS:DTSID="{0FFAF3C4-4082-4A65-88FE-DD9043F5E8CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="2"
+              DTS:MaximumWidth="2"
+              DTS:DataType="129"
+              DTS:ObjectName="System type"
+              DTS:DTSID="{15DC46FE-98B3-4172-A6B6-C5A291A5240A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="5"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:ObjectName="Beginning procedure"
+              DTS:DTSID="{2F50E37B-38E8-4638-A429-346D140F5FC0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="4"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:ObjectName="HCPCS group"
+              DTS:DTSID="{BECBEB22-A8BA-4518-9694-26FAE5DEA137}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="5"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:ObjectName="Ending procedure"
+              DTS:DTSID="{68C7C7CF-B8A0-4CBB-8D3C-2D82E8AB3F42}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="36"
+              DTS:MaximumWidth="36"
+              DTS:DataType="129"
+              DTS:ObjectName="Range description"
+              DTS:DTSID="{DD063AD9-1EF7-488F-8FCF-B34767A24889}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="42"
+              DTS:MaximumWidth="42"
+              DTS:DataType="129"
+              DTS:ObjectName="HCPCS group description"
+              DTS:DTSID="{66922EA2-9251-45CF-8329-CAFAC4507ACA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="9"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:ObjectName="Number of occurrences in database"
+              DTS:DTSID="{0644F3C1-AA59-460D-BE07-8D8F7EDA94EE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="6"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:ObjectName="Weighted mean"
+              DTS:DTSID="{F3A5DA2E-0082-4639-92FF-297773721855}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="6"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:ObjectName="Weighted mode"
+              DTS:DTSID="{1A7E2397-3047-4333-8880-3666374DBF41}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="1"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:ObjectName="Mode tie"
+              DTS:DTSID="{CED19BB5-7D39-48F0-A215-A7C3C7CE6E5F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="6"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:ObjectName="50th Percentile"
+              DTS:DTSID="{BD485F62-66C6-401D-94A4-6C8881F9FBA3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="6"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:ObjectName="60th Percentile"
+              DTS:DTSID="{3857EE83-4799-4DF7-9AB4-908CEAAB7BFB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="6"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:ObjectName="70th Percentile"
+              DTS:DTSID="{C5409AAB-822E-48BD-8A9F-FF03BEE662C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="6"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:ObjectName="75th Percentile"
+              DTS:DTSID="{45B83DF8-AE0D-4730-B10A-65F0BEC4DCB5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="6"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:ObjectName="80th Percentile"
+              DTS:DTSID="{F97F8D08-90BB-44A4-B786-B700BEF8EDCE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="6"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:ObjectName="85th Percentile"
+              DTS:DTSID="{6A3639F5-65A6-4757-9656-DE24DC014DD6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="6"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:ObjectName="90th Percentile"
+              DTS:DTSID="{AC3E2273-9888-4707-8D77-9C2A934D6DF0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:ObjectName="95th Percentile"
+              DTS:DTSID="{9B8CE555-50EB-49C0-9CD6-3BC26F7C99F7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SQL1.LOAD]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{99B2025B-D546-41D6-9027-7F80B055329D}"
+      DTS:ObjectName="SQL1.LOAD">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=SQL1;Initial Catalog=LOAD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{28F5AD0C-D563-4809-B397-235D7B914442}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="oLayoutFile">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{05BF34C2-7A24-4D27-92AB-B1CD34ADFF5E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="sFileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EB36126C-D248-40B7-A70F-E51F58390693}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REPLACE((DT_WSTR,30)(DT_R8)@[System::ContainerStartTime],&quot;.&quot;,&quot;&quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="sFileProcessId">
+      <DTS:VariableValue
+        DTS:DataType="8">42111447256944448</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3E91B044-5B47-4BC4-8B77-D690794F0B0D}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="sShortFileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{62AE90FD-4A0B-4BE9-8E98-4C0129CC8C6A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="sSubjectArea">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{CB5860E5-D2EE-4084-B426-E39F0D915433}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.SqlServer.Dts.Runtime.Enumerators.ADO.ForEachADOEnumerator, Microsoft.SqlServer.ForEachADOEnumerator, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+        DTS:DTSID="{7F601C46-117D-4A9D-BFAC-E26DFB3AECB0}"
+        DTS:ObjectName="{7F601C46-117D-4A9D-BFAC-E26DFB3AECB0}">
+        <DTS:ObjectData>
+          <FEEADO
+            EnumType="EnumerateRowsInFirstTable"
+            VarName="User::oLayoutFile" />
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Load Body_Range_Files"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{57AF53AB-20ED-42DC-9992-E3955853C6CA}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load Body_Range_Files"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables"
+                  componentClassID="{49928E82-9C4E-49F0-AABE-3812B82707EC}"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Add Metadata Variables"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Output].Columns[FileName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Output].Columns[FileName]"
+                          name="FileName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_WSTR,100)@[User::sShortFileName]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_WSTR,100)@[User::sShortFileName]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Output].Columns[FileProcessId]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="20"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Output].Columns[FileProcessId]"
+                          name="FileProcessId"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_WSTR,20)@[User::sFileProcessId]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_WSTR,20)@[User::sFileProcessId]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Output].Columns[FileProcessDateTime]"
+                          dataType="date"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Output].Columns[FileProcessDateTime]"
+                          name="FileProcessDateTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[System::ContainerStartTime]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[System::ContainerStartTime]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Output].Columns[SubjectArea]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Output].Columns[SubjectArea]"
+                          name="SubjectArea"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,100,1252)@[User::sSubjectArea]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,100,1252)@[User::sSubjectArea]</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files"
+                  componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Body_Range_Files"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[Averify].[Body_Range_Files]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">ROWS_PER_BATCH = 5000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">1000</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[SQL1.LOAD]"
+                      connectionManagerRefId="Package.ConnectionManagers[SQL1.LOAD]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[Record type]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="2"
+                          cachedName="Record type"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Record type]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Record type]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[Identifies system codes]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1"
+                          cachedName="Identifies system codes"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Identifies system codes]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Identifies system codes]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[System type]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="2"
+                          cachedName="System type"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[System type]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[System type]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[Number of occurrences in database]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="9"
+                          cachedName="Number of occurrences in database"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Number of occurrences in database]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Number of occurrences in database]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[Mode tie]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1"
+                          cachedName="Mode tie"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Mode tie]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Mode tie]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[50th Percentile]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="50th Percentile"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[50th Percentile]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[50th Percentile]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[60th Percentile]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="60th Percentile"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[60th Percentile]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[60th Percentile]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[70th Percentile]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="70th Percentile"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[70th Percentile]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[70th Percentile]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[75th Percentile]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="75th Percentile"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[75th Percentile]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[75th Percentile]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[80th Percentile]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="80th Percentile"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[80th Percentile]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[80th Percentile]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[85th Percentile]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="85th Percentile"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[85th Percentile]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[85th Percentile]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[90th Percentile]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="90th Percentile"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[90th Percentile]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[90th Percentile]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[95th Percentile]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="95th Percentile"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[95th Percentile]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[95th Percentile]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[FileName]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="FileName"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[FileName]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Output].Columns[FileName]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[FileProcessId]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="FileProcessId"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[FileProcessId]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Output].Columns[FileProcessId]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[Type]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1"
+                          cachedName="Type"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Type]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[State_Region Abbreviation]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="2"
+                          cachedName="State_Region Abbreviation"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[State_Region Abbreviation]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[State_Region Abbreviation]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[Geographical area (geozip)]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="3"
+                          cachedName="Geographical area (geozip)"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Geographical area (geozip)]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Geographical area (geozip)]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[Bodily range group]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="2"
+                          cachedName="Bodily range group"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Bodily range group]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Bodily range group]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[Beginning procedure]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="5"
+                          cachedName="Beginning procedure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Beginning procedure]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Beginning procedure]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[HCPCS group]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="HCPCS group"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[HCPCS group]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[HCPCS group]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[Ending procedure]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="5"
+                          cachedName="Ending procedure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Ending procedure]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Ending procedure]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[Range description]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="36"
+                          cachedName="Range description"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Range description]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Range description]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[HCPCS group description]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="42"
+                          cachedName="HCPCS group description"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[HCPCS group description]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[HCPCS group description]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[Weighted mean]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="Weighted mean"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Weighted mean]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Weighted mean]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[Weighted mode]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="Weighted mode"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Weighted mode]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Weighted mode]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[FileProcessDateTime]"
+                          cachedDataType="date"
+                          cachedName="FileProcessDateTime"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[FileProcessDateTime]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Output].Columns[FileProcessDateTime]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].Columns[SubjectArea]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="SubjectArea"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[SubjectArea]"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Output].Columns[SubjectArea]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Record type]"
+                          codePage="1252"
+                          dataType="str"
+                          length="2"
+                          name="Record type" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Identifies system codes]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="Identifies system codes" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[System type]"
+                          codePage="1252"
+                          dataType="str"
+                          length="2"
+                          name="System type" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Number of occurrences in database]"
+                          codePage="1252"
+                          dataType="str"
+                          length="9"
+                          name="Number of occurrences in database" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Mode tie]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="Mode tie" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[50th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="50th Percentile" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[60th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="60th Percentile" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[70th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="70th Percentile" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[75th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="75th Percentile" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[80th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="80th Percentile" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[85th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="85th Percentile" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[90th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="90th Percentile" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[95th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="95th Percentile" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[FileName]"
+                          dataType="wstr"
+                          length="100"
+                          name="FileName" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[FileProcessId]"
+                          dataType="wstr"
+                          length="20"
+                          name="FileProcessId" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="Type" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[State_Region Abbreviation]"
+                          codePage="1252"
+                          dataType="str"
+                          length="2"
+                          name="State_Region Abbreviation" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Geographical area (geozip)]"
+                          codePage="1252"
+                          dataType="str"
+                          length="3"
+                          name="Geographical area (geozip)" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Bodily range group]"
+                          codePage="1252"
+                          dataType="str"
+                          length="2"
+                          name="Bodily range group" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Beginning procedure]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="Beginning procedure" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[HCPCS group]"
+                          codePage="1252"
+                          dataType="str"
+                          length="4"
+                          name="HCPCS group" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Ending procedure]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="Ending procedure" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Range description]"
+                          codePage="1252"
+                          dataType="str"
+                          length="36"
+                          name="Range description" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[HCPCS group description]"
+                          codePage="1252"
+                          dataType="str"
+                          length="42"
+                          name="HCPCS group description" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Weighted mean]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="Weighted mean" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[Weighted mode]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="Weighted mode" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[SubjectArea]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="SubjectArea" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input].ExternalColumns[FileProcessDateTime]"
+                          dataType="dbTimeStamp"
+                          name="FileProcessDateTime" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source"
+                  componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Body_Range_Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Body Range Files_Layout_60_61_66]"
+                      connectionManagerRefId="Package.ConnectionManagers[Body Range Files_Layout_60_61_66]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Record type]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Record type]"
+                          length="2"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Record type]"
+                          name="Record type"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Identifies system codes]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Identifies system codes]"
+                          length="1"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Identifies system codes]"
+                          name="Identifies system codes"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[System type]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[System type]"
+                          length="2"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[System type]"
+                          name="System type"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Number of occurrences in database]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Number of occurrences in database]"
+                          length="9"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Number of occurrences in database]"
+                          name="Number of occurrences in database"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Mode tie]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Mode tie]"
+                          length="1"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Mode tie]"
+                          name="Mode tie"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[50th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[50th Percentile]"
+                          length="6"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[50th Percentile]"
+                          name="50th Percentile"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[60th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[60th Percentile]"
+                          length="6"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[60th Percentile]"
+                          name="60th Percentile"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[70th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[70th Percentile]"
+                          length="6"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[70th Percentile]"
+                          name="70th Percentile"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[75th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[75th Percentile]"
+                          length="6"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[75th Percentile]"
+                          name="75th Percentile"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[80th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[80th Percentile]"
+                          length="6"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[80th Percentile]"
+                          name="80th Percentile"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[85th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[85th Percentile]"
+                          length="6"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[85th Percentile]"
+                          name="85th Percentile"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[90th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[90th Percentile]"
+                          length="6"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[90th Percentile]"
+                          name="90th Percentile"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[95th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[95th Percentile]"
+                          length="6"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[95th Percentile]"
+                          name="95th Percentile"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Type]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Type]"
+                          length="1"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Type]"
+                          name="Type"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[State_Region Abbreviation]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[State_Region Abbreviation]"
+                          length="2"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[State_Region Abbreviation]"
+                          name="State_Region Abbreviation"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Geographical area (geozip)]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Geographical area (geozip)]"
+                          length="3"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Geographical area (geozip)]"
+                          name="Geographical area (geozip)"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Bodily range group]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Bodily range group]"
+                          length="2"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Bodily range group]"
+                          name="Bodily range group"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Beginning procedure]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Beginning procedure]"
+                          length="5"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Beginning procedure]"
+                          name="Beginning procedure"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[HCPCS group]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[HCPCS group]"
+                          length="4"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[HCPCS group]"
+                          name="HCPCS group"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Ending procedure]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Ending procedure]"
+                          length="5"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Ending procedure]"
+                          name="Ending procedure"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Range description]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Range description]"
+                          length="36"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Range description]"
+                          name="Range description"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[HCPCS group description]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[HCPCS group description]"
+                          length="42"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[HCPCS group description]"
+                          name="HCPCS group description"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Weighted mean]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Weighted mean]"
+                          length="6"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Weighted mean]"
+                          name="Weighted mean"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Weighted mode]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Weighted mode]"
+                          length="6"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].Columns[Weighted mode]"
+                          name="Weighted mode"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Record type]"
+                          codePage="1252"
+                          dataType="str"
+                          length="2"
+                          name="Record type" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Identifies system codes]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="Identifies system codes" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[System type]"
+                          codePage="1252"
+                          dataType="str"
+                          length="2"
+                          name="System type" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Number of occurrences in database]"
+                          codePage="1252"
+                          dataType="str"
+                          length="9"
+                          name="Number of occurrences in database" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Mode tie]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="Mode tie" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[50th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="50th Percentile" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[60th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="60th Percentile" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[70th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="70th Percentile" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[75th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="75th Percentile" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[80th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="80th Percentile" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[85th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="85th Percentile" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[90th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="90th Percentile" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[95th Percentile]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="95th Percentile" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Type]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="Type" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[State_Region Abbreviation]"
+                          codePage="1252"
+                          dataType="str"
+                          length="2"
+                          name="State_Region Abbreviation" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Geographical area (geozip)]"
+                          codePage="1252"
+                          dataType="str"
+                          length="3"
+                          name="Geographical area (geozip)" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Bodily range group]"
+                          codePage="1252"
+                          dataType="str"
+                          length="2"
+                          name="Bodily range group" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Beginning procedure]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="Beginning procedure" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[HCPCS group]"
+                          codePage="1252"
+                          dataType="str"
+                          length="4"
+                          name="HCPCS group" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Ending procedure]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="Ending procedure" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Range description]"
+                          codePage="1252"
+                          dataType="str"
+                          length="36"
+                          name="Range description" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[HCPCS group description]"
+                          codePage="1252"
+                          dataType="str"
+                          length="42"
+                          name="HCPCS group description" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Weighted mean]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="Weighted mean" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output].ExternalColumns[Weighted mode]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="Weighted mode" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\Load Body_Range_Files.Paths[Derived Column Output]"
+                  endId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Load Body_Range_Files.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables.Inputs[Derived Column Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{FBA3CE7E-64C7-49DD-981F-3C251F3C0236}"
+          DTS:ObjectName="{FBA3CE7E-64C7-49DD-981F-3C251F3C0236}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::sFileName" />
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{660BF011-96F2-416E-9C98-FF5AB0DCDC43}"
+          DTS:ObjectName="{660BF011-96F2-416E-9C98-FF5AB0DCDC43}"
+          DTS:ValueIndex="1"
+          DTS:VariableName="User::sShortFileName" />
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{808F6710-227C-4303-AD65-179AA43CC0A9}"
+          DTS:ObjectName="{808F6710-227C-4303-AD65-179AA43CC0A9}"
+          DTS:ValueIndex="2"
+          DTS:VariableName="User::sSubjectArea" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get Files for this Layout"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2a430de1-1956-4f35-b6eb-b9a9fb30b29d}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get Files for this Layout"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Get Files for this Layout\FileName"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="FileName"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Averify].[File_LookUp]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">Select FileFullPath,FileName,FileSubjectArea
+from  Averify.File_Lookup
+where FileLayoutGroupFolder='FileType_Body Range Files'</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Get Files for this Layout\FileName.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SQL1.LOAD]"
+                  connectionManagerRefId="Package.ConnectionManagers[SQL1.LOAD]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].Columns[FileFullPath]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].ExternalColumns[FileFullPath]"
+                      length="255"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].Columns[FileFullPath]"
+                      name="FileFullPath"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].Columns[FileName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].ExternalColumns[FileName]"
+                      length="100"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].Columns[FileName]"
+                      name="FileName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].Columns[FileSubjectArea]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].ExternalColumns[FileSubjectArea]"
+                      length="150"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].Columns[FileSubjectArea]"
+                      name="FileSubjectArea"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].ExternalColumns[FileFullPath]"
+                      dataType="wstr"
+                      length="255"
+                      name="FileFullPath" />
+                    <externalMetadataColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].ExternalColumns[FileName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="FileName" />
+                    <externalMetadataColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].ExternalColumns[FileSubjectArea]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      name="FileSubjectArea" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[FileFullPath]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[FileFullPath]"
+                      name="FileFullPath" />
+                    <outputColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[FileName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[FileName]"
+                      name="FileName" />
+                    <outputColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[FileSubjectArea]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[FileSubjectArea]"
+                      name="FileSubjectArea" />
+                    <outputColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Get Files for this Layout\Recordset Destination"
+              componentClassID="{C457FD7E-CE98-4C4B-AEFE-F3AE0044F181}"
+              contactInfo="Recordset Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates and populates an in-memory ADO recordset that is available outside of the data flow. Scripts and other package elements can use the recordset. For example, use a recordset to store the names of files that will be loaded into the data warehouse."
+              name="Recordset Destination">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the recordset."
+                  name="VariableName">User::oLayoutFile</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Get Files for this Layout\Recordset Destination.Inputs[Recordset Destination Input]"
+                  hasSideEffects="true"
+                  name="Recordset Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Get Files for this Layout\Recordset Destination.Inputs[Recordset Destination Input].Columns[FileFullPath]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FileFullPath"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].Columns[FileFullPath]" />
+                    <inputColumn
+                      refId="Package\Get Files for this Layout\Recordset Destination.Inputs[Recordset Destination Input].Columns[FileName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="FileName"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].Columns[FileName]" />
+                    <inputColumn
+                      refId="Package\Get Files for this Layout\Recordset Destination.Inputs[Recordset Destination Input].Columns[FileSubjectArea]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="FileSubjectArea"
+                      lineageId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output].Columns[FileSubjectArea]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Get Files for this Layout.Paths[OLE DB Source Output]"
+              endId="Package\Get Files for this Layout\Recordset Destination.Inputs[Recordset Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Get Files for this Layout\FileName.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{41A7855E-0D64-441F-A937-94F50BFA324D}"
+      DTS:From="Package\Get Files for this Layout"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Foreach Loop Container" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Foreach Loop Container\Load Body_Range_Files"
+          TopLeft="5.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="201,102"
+          Size="201,146"
+          Id="Package\Foreach Loop Container"
+          TopLeft="155,83" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Get Files for this Layout"
+          TopLeft="160,2" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="255.5,44">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Foreach Loop Container\Load Body_Range_Files">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Source"
+          TopLeft="80,27" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files"
+          TopLeft="84,228" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Foreach Loop Container\Load Body_Range_Files\Add Metadata Variables"
+          TopLeft="73,117" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Load Body_Range_Files.Paths[Flat File Source Output]"
+          TopLeft="168,69">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48"
+              Start="0,0"
+              End="0,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Load Body_Range_Files.Paths[Derived Column Output]"
+          TopLeft="167,159">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,69"
+              Start="0,0"
+              End="0,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Load Body_Range_Files\Body_Range_Files">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Get Files for this Layout">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="122,42"
+          Id="Package\Get Files for this Layout\FileName"
+          TopLeft="104,50" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Get Files for this Layout\Recordset Destination"
+          TopLeft="324,50" />
+        <EdgeLayout
+          Id="Package\Get Files for this Layout.Paths[OLE DB Source Output]"
+          TopLeft="226,71">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="98,0"
+              Start="0,0"
+              End="90.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="90.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Get Files for this Layout\FileName">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
